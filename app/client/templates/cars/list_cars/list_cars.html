@@ -1,0 +1,29 @@
+<template name="ListCars">
+  <h1>Cars List</h1>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Fuel Type</th>
+        <th>Body Style</th>
+        <th>Top Speed</th>
+        <th>Power</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each cars}}
+      <tr>
+        <td>{{brand}}</td>
+        <td>{{model}}</td>
+        <td>{{fueltype}}</td>
+        <td>{{bodystyle}}</td>
+        <td>{{topspeed}}</td>
+        <td>{{power}}</td>
+        <td>{{#linkTo route='editCar'}}<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>{{/linkTo}}</td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+</template>
